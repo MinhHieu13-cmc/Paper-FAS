@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 from torchvision import models
-from LAB import DeepTreeModule
-from LAB import PersonalizationModule
+from LAB.DeepTreeLearning import DeepTreeModule
+from LAB.APersonalizedBenchmark import PersonalizationModule
 
 class FaceAntiSpoofingModel(nn.Module):
     def __init__(self, num_classes=2):

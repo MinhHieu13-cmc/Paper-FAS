@@ -3,7 +3,8 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 import numpy as np
-
+import os
+from PIL import Image
 class FaceDataset(Dataset):
     def __init__(self, root_dir, transform=None):
         """
@@ -61,7 +62,7 @@ class EarlyStopping:
         self.counter = 0
         self.best_score = None
         self.early_stop = False
-        self.val_loss_min = np.Inf
+        self.val_loss_min = np.inf
         self.delta = delta
         self.path = path
 

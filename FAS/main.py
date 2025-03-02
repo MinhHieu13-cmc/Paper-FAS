@@ -2,8 +2,16 @@ import torch
 import torch.nn as nn
 from FaceAntiSpoofingModel import FaceAntiSpoofingModel
 from Processdata import EarlyStopping , FaceDataset
+from torch.utils.data import DataLoader
+from torchvision import transforms
+from torch.optim.lr_scheduler import ReduceLROnPlateau
+import os
 
 if __name__ == '__main__':
+    dataset_dir = r"C:\Users\GIGABYTE\PycharmProjects\Paper-FAS\Dataset\Dataset-used"
+    train_dir = "C:\\Users\\GIGABYTE\\PycharmProjects\\Paper-FAS\\Dataset\\Dataset-used\\train"
+    val_dir = "C:\\Users\\GIGABYTE\\PycharmProjects\\Paper-FAS\\Dataset\\Dataset-used\\valid"
+    test_dir = "C:\\Users\\GIGABYTE\\PycharmProjects\\Paper-FAS\\Dataset\\Dataset-used\\test"
     # Bộ tiền xử lý ảnh (resize, normalize)
     transform = transforms.Compose([
         transforms.Resize((224, 224)),  # Resize ảnh về kích thước phù hợp
