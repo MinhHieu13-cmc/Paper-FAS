@@ -19,11 +19,11 @@ if __name__ == '__main__':
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
 
-    # Định nghĩa tập train và val
+    # Định nghĩa tập train_convert và val
     train_dataset = FaceDataset(root_dir=train_dir, transform=transform)
     val_dataset = FaceDataset(root_dir=val_dir, transform=transform)
 
-    # Tạo DataLoader cho tập train và val
+    # Tạo DataLoader cho tập train_convert và val
     train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 

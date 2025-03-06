@@ -5,7 +5,7 @@
 # if __name__ == '__main__':
 #     # Đường dẫn dữ liệu
 #     dataset_dir = r"C:\Users\GIGABYTE\PycharmProjects\Paper-FAS\Dataset\Dataset-used"
-#     train_dir = "C:\\Users\\GIGABYTE\\PycharmProjects\\Paper-FAS\\Dataset\\Dataset-used\\train"
+#     train_dir = "C:\\Users\\GIGABYTE\\PycharmProjects\\Paper-FAS\\Dataset\\Dataset-used\\train_convert"
 #     val_dir = "C:\\Users\\GIGABYTE\\PycharmProjects\\Paper-FAS\\Dataset\\Dataset-used\\valid"
 #     test_dir = "C:\\Users\\GIGABYTE\\PycharmProjects\\Paper-FAS\\Dataset\\Dataset-used\\test"
 #     # kiem tra datagument

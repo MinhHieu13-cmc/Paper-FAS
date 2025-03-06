@@ -2,7 +2,7 @@ import os
 
 # Hàm đếm tổng số lượng ảnh trong mỗi tệp
 def count_images_in_sub_datasets(dataset_dir):
-    sub_datasets = ['train', 'valid', 'test']
+    sub_datasets = ['train_convert', 'valid', 'test']
     counts = {}
 
     for sub in sub_datasets:
