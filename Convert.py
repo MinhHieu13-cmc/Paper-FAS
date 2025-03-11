@@ -19,7 +19,7 @@ onnx_converter(
     onnx_model_path = "C:\\Users\\GIGABYTE\\PycharmProjects\\Paper-FAS\Model\\face_antispoofing.onnx",
     need_simplify = True,
     output_path = "C:\\Users\\GIGABYTE\\PycharmProjects\\Paper-FAS",
-    target_formats = ['tflite'], #or ['keras'], ['keras', 'tflite']
+    target_formats = ['keras', 'tflite'], #or ['keras'], ['keras', 'tflite']
     weight_quant = False,
     int8_model = True, # do quantification
     int8_mean = [0.55717504 ,0.45449087 ,0.41123426], # give mean of image preprocessing
