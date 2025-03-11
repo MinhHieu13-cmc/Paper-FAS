@@ -11,7 +11,6 @@ representative_transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Lambda(lambda x: x * 255)
 ])
-# Gi? s? ??y l? ???ng d?n ??n representative dataset (ch?a th? m?c 'fake' v? 'real')
 representative_dir = r"C:\Users\GIGABYTE\PycharmProjects\Paper-FAS\Dataset\train_convert_reduced"
 
 rep_dataset = FaceDataset(root_dir=representative_dir, transform=representative_transform)
