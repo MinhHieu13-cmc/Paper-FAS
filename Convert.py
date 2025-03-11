@@ -14,7 +14,6 @@ representative_transform = transforms.Compose([
 # Gi? s? ??y l? ???ng d?n ??n representative dataset (ch?a th? m?c 'fake' v? 'real')
 representative_dir = r"C:\Users\GIGABYTE\PycharmProjects\Paper-FAS\Dataset\train_convert_reduced"
 
-# T?o dataset s? d?ng representative_transform (kh?ng Normalize)
 rep_dataset = FaceDataset(root_dir=representative_dir, transform=representative_transform)
 
 onnx_converter(
