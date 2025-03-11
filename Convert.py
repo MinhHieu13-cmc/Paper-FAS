@@ -2,6 +2,20 @@ import sys
 # Thêm thư mục cha chứa folder 'onnx2tflite'
 sys.path.append(r"C:\Users\GIGABYTE\PycharmProjects\Paper-FAS\onnx2tflite")
 from onnx2tflite.converter import onnx_converter
+from torchvision import transforms
+from PIL import Image
+
+
+representative_transform = transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ToTensor(),
+    transforms.Lambda(lambda x: x * 255)
+])
+# Gi? s? ??y l? ???ng d?n ??n representative dataset (ch?a th? m?c 'fake' v? 'real')
+representative_dir = r"C:\Users\GIGABYTE\PycharmProjects\Paper-FAS\Dataset\train_convert_reduced"
+
+# T?o dataset s? d?ng representative_transform (kh?ng Normalize)
+rep_dataset = FaceDataset(root_dir=representative_dir, transform=representative_transform)
 
 onnx_converter(
     onnx_model_path = "C:\\Users\\GIGABYTE\\PycharmProjects\\Paper-FAS\Model\\face_antispoofing.onnx",
